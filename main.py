@@ -2,8 +2,11 @@ from flask import Flask, render_template, redirect, request, jsonify
 import os
 import config
 import spreadsheet
+import slack
+import datetime 
 
-  
+START_TIME = datetime.datetime(2024, 12, 28, 22, 00, 00)
+END_TIME = datetime.datetime(2025, 1, 4, 7, 00, 00)
 app = Flask(__name__, static_folder='.', static_url_path='')
 @app.route('/')
 def main():
@@ -15,6 +18,8 @@ def post_arrive_at_work():
     return redirect('/')
   user = request.form['user_out']
   spreadsheet.in_out_user(user, "in")
+  if START_TIME < datetime.datetime.now() < END_TIME:
+    slack.send_slack_message(f"{user}が来ました！")
   return redirect('/')
 
 
@@ -24,6 +29,8 @@ def post_clock_out():
     return redirect('/')
   user = request.form['user_in']
   spreadsheet.in_out_user(user, "out")
+  if START_TIME < datetime.datetime.now() < END_TIME:
+    slack.send_slack_message(f"{user}が帰ります！お疲れ様です！")  
   return redirect('/')
 
 # userの状態を取得する
