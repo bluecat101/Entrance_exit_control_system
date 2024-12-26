@@ -1,0 +1,54 @@
+main {
+  background-image: linear-gradient(90deg, #ffcccc 50%, white 51%);
+  background-size: 200px 200px;
+  background-size: contain;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.arrow-right {
+  display: inline-block;
+  width: 200px;
+  height: 73.5px;
+  background: #000000;
+  clip-path: polygon(
+    0 31%,
+    81.6% 31%,
+    81.6% 0,
+    100% 50%,
+    81.6% 100%,
+    81.6% 69%,
+    0 69%
+  );
+}
+
+.arrow-left {
+  display: inline-block;
+  width: 200px;
+  height: 73.5px;
+  background: #000000;
+  clip-path: polygon(
+    0 50%,
+    18.4% 0,
+    18.4% 31%,
+    100% 31%,
+    100% 69%,
+    18.4% 69%,
+    18.4% 100%
+  );
+}
+form {
+  display: flex;
+}
+.div-button-arrow {
+  margin: 0 30px; /* 左右に110pxの余白を適用 */
+  text-align: center; /* 子要素の中央寄せ */
+}
+
+button {
+  width: 150px;
+  display: inline-block; /* ボタンをインラインブロック要素にする */
+  margin: 10px 0; /* 上下に余白を追加 */
+}

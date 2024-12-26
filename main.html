@@ -1,77 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>冬休み限定タイムカード</title>
-    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+    <title>冬休み限定在室ログ</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
-    <div class="member">
-      <h2>名前リスト</h2>
+    <main>
+      <div class="member">
+        <h2>名前リスト</h2>
 
-      <form id="fruitForm" method="POST" style="display: flex">
-        <div>
-          <div>今います</div>
-          <select name="user_in" size="13" id="user_in"></select>
-        </div>
-        <button
-          type="submit"
-          style="width: 200px; height: 100px"
-          onclick="document.getElementById('fruitForm').action='/arrive_at_work'"
-          style="display: block; margin: auto 0"
-        >
-          俺参上!
-        </button>
-        <button
-          type="submit"
-          style="width: 200px; height: 100px"
-          onclick="document.getElementById('fruitForm').action='/clock_out'"
-          style="display: block; margin: auto 0"
-        >
-          帰宅させていただきます。
-        </button>
-        <div>
-          <div>家で休んでいるよ</div>
-          <select name="user_out" size="13" id="user_out"></select>
-        </div>
-      </form>
-      <script defer>
-        (async function getUserList() {
-          try {
-            const response = await fetch("/get_in_out_name");
-            const data = await response.json();
+        <form id="fruitForm" method="POST">
+          <div>
+            <div>今います</div>
+            <select name="user_in" size="13" id="user_in"></select>
+          </div>
 
-            if (data.users_in && data.users_out) {
-              users_in = data.users_in;
-              users_out = data.users_out;
-            } else {
-              throw new Error("Can't get in out name");
-            }
+          <div class="div-button-arrow">
+            <button
+              type="submit"
+              onclick="document.getElementById('fruitForm').action='/arrive_at_work'"
+            >
+              参上!</button
+            ><br />
+            <span class="arrow-left"></span><br />
+            <span class="arrow-right"></span><br />
 
-            // user_outの追加
-            const user_out_select = document.getElementById("user_out");
-            users_out.forEach((user) => {
-              console.log("out", user);
-              const option = document.createElement("option");
-              option.value = user;
-              option.innerHTML = user;
-              user_out_select.appendChild(option); // 追加
-            });
-
-            // user_inの追加
-            const user_in_select = document.getElementById("user_in");
-            users_in.forEach((user) => {
-              console.log("in", user);
-              const option = document.createElement("option");
-              option.value = user;
-              option.innerHTML = user;
-              user_in_select.appendChild(option); // 追加
-            });
-          } catch (error) {
-            console.error("Error:", error);
+            <button
+              type="submit"
+              onclick="document.getElementById('fruitForm').action='/clock_out'"
+            >
+              お疲れ様です！！</button
+            ><br />
+          </div>
+          <div>
+            <div>家にいるよ</div>
+            <select name="user_out" size="13" id="user_out"></select>
+          </div>
+        </form>
+        <script defer>
+          const date = new Date();
+          const day = date.getDate();
+          let = backgroundImage = "";
+          if (day < 3) {
+            backgroundImage = "url('shougatu.png')";
           }
-        })();
-      </script>
-    </div>
+          document.getElementsByTagName("main")[0].style.backgroundImage =
+            backgroundImage;
+        </script>
+        <script defer>
+          (async function getUserList() {
+            try {
+              const response = await fetch("/get_in_out_name");
+              const data = await response.json();
+
+              if (data.users_in && data.users_out) {
+                users_in = data.users_in;
+                users_out = data.users_out;
+              } else {
+                throw new Error("Can't get in out name");
+              }
+
+              // user_outの追加
+              const user_out_select = document.getElementById("user_out");
+              users_out.forEach((user) => {
+                const option = document.createElement("option");
+                option.value = user;
+                option.innerHTML = user;
+                user_out_select.appendChild(option); // 追加
+              });
+
+              // user_inの追加
+              const user_in_select = document.getElementById("user_in");
+              users_in.forEach((user) => {
+                const option = document.createElement("option");
+                option.value = user;
+                option.innerHTML = user;
+                user_in_select.appendChild(option); // 追加
+              });
+            } catch (error) {
+              console.error("Error:", error);
+            }
+          })();
+        </script>
+      </div>
+    </main>
   </body>
 </html>
