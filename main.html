@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>冬休み限定タイムカード</title>
+    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+  </head>
+
+  <body>
+    <div class="member">
+      <h2>名前リスト</h2>
+
+      <form id="fruitForm" method="POST" style="display: flex">
+        <div>
+          <div>家で休んでいるよ</div>
+          <select name="user_out" size="13" id="user_out"></select>
+        </div>
+        <button
+          type="submit"
+          style="width: 200px; height: 100px"
+          onclick="document.getElementById('fruitForm').action='/arrive_at_work'"
+          style="display: block; margin: auto 0"
+        >
+          俺参上!
+        </button>
+        <button
+          type="submit"
+          style="width: 200px; height: 100px"
+          onclick="document.getElementById('fruitForm').action='/clock_out'"
+          style="display: block; margin: auto 0"
+        >
+          帰宅させていただきます。
+        </button>
+        <div>
+          <div>今います</div>
+          <select name="user_in" size="13" id="user_in"></select>
+        </div>
+      </form>
+      <script defer>
+        (async function getUserList() {
+          try {
+            let name_list = [];
+            let response = await fetch("/get_name_list");
+            let data = await response.json();
+            if (data.name_list) {
+              name_list = data.name_list;
+            } else {
+              throw new Error("Can't get name list");
+            }
+            response = await fetch("/get_in_out_name");
+            data = await response.json();
+
+            if (data.name) {
+              in_user_list = data.name;
+            } else {
+              throw new Error("Can't get in out name");
+            }
+
+            // user_outの追加
+            const user_out = document.getElementById("user_out");
+            name_list.forEach((element) => {
+              if (in_user_list.indexOf(element) != -1) {
+                return;
+              }
+              const option = document.createElement("option");
+              option.value = element;
+              option.innerHTML = element;
+              user_out.appendChild(option); // 追加
+            });
+
+            // user_inの追加
+            const user_in = document.getElementById("user_in");
+            in_user_list.forEach((element) => {
+              const option = document.createElement("option");
+              option.value = element;
+              option.innerHTML = element;
+              user_in.appendChild(option); // 追加
+            });
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        })();
+      </script>
+    </div>
+  </body>
+</html>
