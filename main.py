@@ -13,7 +13,7 @@ def write_log(user, action):
   
 app = Flask(__name__, static_folder='.', static_url_path='')
 @app.route('/')
-def hello():
+def main():
   return app.send_static_file('main.html')
 
 @app.route('/arrive_at_work', methods=['POST'])
