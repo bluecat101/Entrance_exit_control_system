@@ -38,42 +38,34 @@
       <script defer>
         (async function getUserList() {
           try {
-            let name_list = [];
-            let response = await fetch("/get_name_list");
-            let data = await response.json();
-            if (data.name_list) {
-              name_list = data.name_list;
-            } else {
-              throw new Error("Can't get name list");
-            }
-            response = await fetch("/get_in_out_name");
-            data = await response.json();
+            const response = await fetch("/get_in_out_name");
+            const data = await response.json();
 
-            if (data.name) {
-              in_user_list = data.name;
+            if (data.users_in && data.users_out) {
+              users_in = data.users_in;
+              users_out = data.users_out;
             } else {
               throw new Error("Can't get in out name");
             }
 
             // user_outの追加
-            const user_out = document.getElementById("user_out");
-            name_list.forEach((element) => {
-              if (in_user_list.indexOf(element) != -1) {
-                return;
-              }
+            const user_out_select = document.getElementById("user_out");
+            users_out.forEach((user) => {
+              console.log("out", user);
               const option = document.createElement("option");
-              option.value = element;
-              option.innerHTML = element;
-              user_out.appendChild(option); // 追加
+              option.value = user;
+              option.innerHTML = user;
+              user_out_select.appendChild(option); // 追加
             });
 
             // user_inの追加
-            const user_in = document.getElementById("user_in");
-            in_user_list.forEach((element) => {
+            const user_in_select = document.getElementById("user_in");
+            users_in.forEach((user) => {
+              console.log("in", user);
               const option = document.createElement("option");
-              option.value = element;
-              option.innerHTML = element;
-              user_in.appendChild(option); // 追加
+              option.value = user;
+              option.innerHTML = user;
+              user_in_select.appendChild(option); // 追加
             });
           } catch (error) {
             console.error("Error:", error);
