@@ -9,5 +9,10 @@ SPREADSHEET_NAME = os.getenv('SPREADSHEET_NAME')
 SLACK_API_TOKEN = os.getenv('SLACK_API_TOKEN')
 SLACK_CHANNEL_ID = os.getenv('SLACK_CHANNEL_ID')
 
+
+# キーが見つからない場合にはNoneとなる
+def getenv(key):
+  load_dotenv()
+  return os.getenv(key)
 def get_name_list():
   return NAMES.split(',')

@@ -12,8 +12,9 @@
 
         <form id="fruitForm" method="POST">
           <div>
-            <div>今います</div>
-            <select name="user_in" size="13" id="user_in"></select>
+            <div style="border-bottom:solid">今います</div>
+            <div id="user_in"></div>
+            <!-- <select name="user_in" size="13" id="user_in"></select> -->
           </div>
 
           <div class="div-button-arrow">
@@ -34,8 +35,9 @@
             ><br />
           </div>
           <div>
-            <div>家にいるよ</div>
-            <select name="user_out" size="13" id="user_out"></select>
+            <div style="border-bottom:solid">家にいるよ</div>
+            <div id="user_out"></div>
+            <!-- <select name="user_out" size="13" id="user_out"></select> -->
           </div>
         </form>
         <script defer>
@@ -64,19 +66,21 @@
               // user_outの追加
               const user_out_select = document.getElementById("user_out");
               users_out.forEach((user) => {
-                const option = document.createElement("option");
-                option.value = user;
-                option.innerHTML = user;
-                user_out_select.appendChild(option); // 追加
+                user_out_select.innerHTML += `<input type="radio" name="user_out" value=${user} id="${user}"/><label for=${user}>${user}</label></br>`
               });
 
               // user_inの追加
               const user_in_select = document.getElementById("user_in");
               users_in.forEach((user) => {
-                const option = document.createElement("option");
-                option.value = user;
-                option.innerHTML = user;
-                user_in_select.appendChild(option); // 追加
+                user_in_select.innerHTML += `<input type="radio" name="user_in" value=${user} id="${user}"/><label for=${user}>${user}</label></br>`
+                //const input = document.createElement("input");
+                //input.type = "radio"
+                //input.name = "user_in"
+                //input.value = user;
+                //input.innerHTML = user;
+                //user_in_select.appendChild(input); // 追加
+                //const br = document.createElement("br")
+                //user_in_select.appendChild(br); // 追加
               });
             } catch (error) {
               console.error("Error:", error);

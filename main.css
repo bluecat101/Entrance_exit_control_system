@@ -52,3 +52,8 @@ button {
   display: inline-block; /* ボタンをインラインブロック要素にする */
   margin: 10px 0; /* 上下に余白を追加 */
 }
+select {
+  display: block;
+  height: auto;
+  overflow-y: scroll;
+}

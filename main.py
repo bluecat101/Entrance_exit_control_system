@@ -5,6 +5,22 @@ import spreadsheet
 import slack
 import datetime 
 
+name_replace_from_nickname={
+  "ウッディ":"細川",
+  "かんちゃん":"菅野",
+  "YANG":"杨",
+  "けんさん":"田中",
+  "たーさん":"小原",
+  "そらっち":"柳谷",
+	"天国":"武田",
+	"ひろむさん":"新妻",
+	"なとりく":"名執",
+	"でぐっち":"出口",
+	"よしのりさん":"東川",
+	"しょうごくん":"斉藤",
+	"けいちゃん":"中田",
+}
+
 START_TIME = datetime.datetime(2024, 12, 28, 22, 00, 00)
 END_TIME = datetime.datetime(2025, 1, 4, 7, 00, 00)
 app = Flask(__name__, static_folder='.', static_url_path='')
@@ -17,9 +33,9 @@ def post_arrive_at_work():
   if "user_out" not in request.form: # outの状態のuserが選択されるためuser_outとなる
     return redirect('/')
   user = request.form['user_out']
-  spreadsheet.in_out_user(user, "in")
-  if START_TIME < datetime.datetime.now() < END_TIME:
-    slack.send_slack_message(f"{user}が来ました！")
+  users_in, is_ok = spreadsheet.in_out_user(user, "in")
+  if is_ok and START_TIME < datetime.datetime.now() < END_TIME:
+    slack.send_message_with_users_list(name_replace_from_nickname[user], f"[在室]{user} 本日も研究頑張っていきましょう！", list(map(lambda nickname: name_replace_from_nickname[nickname],users_in)), "in")
   return redirect('/')
 
 
@@ -28,9 +44,9 @@ def post_clock_out():
   if "user_in" not in request.form: # inの状態のuserが選択されるためuser_inとなる
     return redirect('/')
   user = request.form['user_in']
-  spreadsheet.in_out_user(user, "out")
-  if START_TIME < datetime.datetime.now() < END_TIME:
-    slack.send_slack_message(f"{user}が帰ります！お疲れ様です！")  
+  users_in, is_ok = spreadsheet.in_out_user(user, "out")
+  if is_ok and START_TIME < datetime.datetime.now() < END_TIME:
+    slack.send_message_with_users_list(name_replace_from_nickname[user], f"[帰宅]{user} 研究お疲れ様です！", list(map(lambda nickname: name_replace_from_nickname[nickname], users_in)), "out")
   return redirect('/')
 
 # userの状態を取得する
@@ -48,4 +64,4 @@ def get_name_list():
   else:
     return jsonify({'error': 'File not found'}), 404
 
-app.run(port=8000, debug=True)  
+app.run(host='0.0.0.0', port=8000, debug=True)  

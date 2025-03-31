@@ -1,0 +1,158 @@
+172.21.214.30 - - [26/Dec/2024 23:33:44] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.30 - - [26/Dec/2024 23:33:44] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:33:44] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:33:44] "GET /get_in_out_name HTTP/1.1" 200 -
+ * Detected change in '/home/saito/Entrance_exit_control_system/slack.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+172.21.214.30 - - [26/Dec/2024 23:34:14] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.30 - - [26/Dec/2024 23:34:14] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:34:14] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:34:14] "GET /get_in_out_name HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.21.214.119:8000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+172.21.214.30 - - [26/Dec/2024 23:52:48] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:52:48] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:52:48] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.30 - - [26/Dec/2024 23:52:57] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.30 - - [26/Dec/2024 23:52:57] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:52:57] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:52:57] "GET /get_in_out_name HTTP/1.1" 200 -
+ * Detected change in '/home/saito/Entrance_exit_control_system/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+ * Detected change in '/home/saito/Entrance_exit_control_system/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+ * Detected change in '/home/saito/Entrance_exit_control_system/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+172.21.214.30 - - [26/Dec/2024 23:54:58] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:54:58] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:54:59] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.30 - - [26/Dec/2024 23:55:06] "[32mPOST /arrive_at_work HTTP/1.1[0m" 302 -
+172.21.214.30 - - [26/Dec/2024 23:55:06] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:55:06] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [26/Dec/2024 23:55:06] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [26/Dec/2024 23:56:02] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [26/Dec/2024 23:56:02] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [26/Dec/2024 23:56:02] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.30 - - [27/Dec/2024 00:00:23] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.30 - - [27/Dec/2024 00:00:23] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [27/Dec/2024 00:00:23] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [27/Dec/2024 00:00:23] "GET /get_in_out_name HTTP/1.1" 200 -
+ * Detected change in '/home/saito/Entrance_exit_control_system/slack.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+ * Detected change in '/home/saito/Entrance_exit_control_system/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+172.21.214.30 - - [27/Dec/2024 00:02:49] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.30 - - [27/Dec/2024 00:02:49] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.30 - - [27/Dec/2024 00:02:50] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [27/Dec/2024 00:02:57] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [27/Dec/2024 00:02:57] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [27/Dec/2024 00:02:57] "GET /get_in_out_name HTTP/1.1" 200 -
+ * Detected change in '/home/saito/Entrance_exit_control_system/slack.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 466-281-516
+172.21.214.67 - - [27/Dec/2024 00:04:07] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [27/Dec/2024 00:04:07] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [27/Dec/2024 00:04:07] "GET /get_in_out_name HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/saito/Entrance_exit_control_system/main.py", line 5, in <module>
+    import slack
+  File "/home/saito/Entrance_exit_control_system/slack.py", line 52
+    text=add_users_list_for_message(f"{name}さんが帰りました。", users),,
+                                                               ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/saito/Entrance_exit_control_system/main.py", line 5, in <module>
+    import slack
+  File "/home/saito/Entrance_exit_control_system/slack.py", line 52
+    text=add_users_list_for_message(f"{name}さんが帰りました。", users),,
+                                                               ^
+SyntaxError: invalid syntax
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.21.214.119:8000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-375-717
+172.21.110.86 - - [28/Dec/2024 03:12:15] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:12:15] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:12:15] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.110.86 - - [28/Dec/2024 03:13:06] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:13:06] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:13:06] "GET /get_in_out_name HTTP/1.1" 200 -
+127.0.0.1 - - [28/Dec/2024 03:35:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Dec/2024 03:35:44] "[36mGET /main.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [28/Dec/2024 03:35:45] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.110.86 - - [28/Dec/2024 03:59:17] "GET / HTTP/1.1" 200 -
+172.21.110.86 - - [28/Dec/2024 03:59:17] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:59:18] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.110.86 - - [28/Dec/2024 03:59:32] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:59:32] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.110.86 - - [28/Dec/2024 03:59:33] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 10:58:26] "[32mPOST /arrive_at_work HTTP/1.1[0m" 302 -
+172.21.214.67 - - [28/Dec/2024 10:58:26] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 10:58:26] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [28/Dec/2024 10:58:27] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 11:07:38] "[32mPOST /arrive_at_work HTTP/1.1[0m" 302 -
+172.21.214.67 - - [28/Dec/2024 11:07:39] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 11:07:39] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [28/Dec/2024 11:07:39] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 17:32:27] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.67 - - [28/Dec/2024 17:32:27] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 17:32:27] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [28/Dec/2024 17:32:27] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 19:49:27] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.67 - - [28/Dec/2024 19:49:28] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [28/Dec/2024 19:49:28] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [28/Dec/2024 19:49:28] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [29/Dec/2024 10:28:00] "[32mPOST /arrive_at_work HTTP/1.1[0m" 302 -
+172.21.214.67 - - [29/Dec/2024 10:28:00] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [29/Dec/2024 10:28:00] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [29/Dec/2024 10:28:00] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [29/Dec/2024 16:55:12] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.67 - - [29/Dec/2024 16:55:12] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [29/Dec/2024 16:55:12] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [29/Dec/2024 16:55:13] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.110.189 - - [31/Dec/2024 14:24:25] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.110.189 - - [31/Dec/2024 14:24:25] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.110.189 - - [31/Dec/2024 14:24:26] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [03/Jan/2025 11:17:16] "[32mPOST /arrive_at_work HTTP/1.1[0m" 302 -
+172.21.214.67 - - [03/Jan/2025 11:17:16] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [03/Jan/2025 11:17:16] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [03/Jan/2025 11:17:16] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [03/Jan/2025 19:16:17] "[32mPOST /clock_out HTTP/1.1[0m" 302 -
+172.21.214.67 - - [03/Jan/2025 19:16:17] "GET / HTTP/1.1" 200 -
+172.21.214.67 - - [03/Jan/2025 19:16:17] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.67 - - [03/Jan/2025 19:16:17] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [05/Jan/2025 01:37:22] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [05/Jan/2025 01:37:27] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [05/Jan/2025 01:37:28] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.67 - - [05/Jan/2025 01:37:33] "GET /get_in_out_name HTTP/1.1" 200 -
+172.21.214.38 - - [06/Jan/2025 17:45:20] "[36mGET / HTTP/1.1[0m" 304 -
+172.21.214.38 - - [06/Jan/2025 17:45:20] "[36mGET /main.css HTTP/1.1[0m" 304 -
+172.21.214.38 - - [06/Jan/2025 17:45:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.21.214.38 - - [06/Jan/2025 17:45:21] "GET /get_in_out_name HTTP/1.1" 200 -

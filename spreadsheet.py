@@ -42,10 +42,10 @@ def in_out_user(name, status):
     users_to_delete = users_in
   # 名前を削除,追加
   if name not in users_to_delete:
-    return False
+    return _, False
   users_to_delete.remove(name)
   users_to_add += [name] 
-  # ダミーデータの追加
+  # ダミーデータの追加(users_in,users_outも変更されるので注意)
   users_to_add += [""] * (MAX_LEN - len(users_to_add))
   users_to_delete +=  [""] * (MAX_LEN - len(users_to_delete))
   # 1度のスプレッドシートへの通信で済ませるようにまとめる
@@ -61,6 +61,7 @@ def in_out_user(name, status):
     write_log(name, "不在→在室")
   elif status == "out":
     write_log(name, "在室→不在")
+  return list(filter(lambda name: name != "", users_in)), True
 
 # userの状態を全て取得
 def get_user_status():
